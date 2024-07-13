@@ -1,18 +1,12 @@
 # 002 - Film Strip Swiper
 
-![Demo Screenshot](https://github.com/Guitouxx/001-WalkingDownTheBrowser/blob/main/static/screenshot.jpg?raw=true)
+### [Live Demo](https://playgl-002-film-strip-swiper.vercel.app)
 
-This repo includes a code extract of the prototype "Walking Down The Browser" [https://playgl.xyz/1](https://playgl.xyz/1).
+![Demo Screenshot](https://github.com/Guitouxx/002-FilmStripSwiper/blob/main/static/screenshot.jpg?raw=true)
 
+This repo includes a code extract of the prototype "WalkingFilm Strip Swiper" at [https://playgl.xyz/2](https://playgl.xyz/2).
 
-The idea for this demo came from [@nonfigurativ's tweet](https://x.com/_nonfigurativ_/status/1727322594570027343) about a cross-browser interactivity test.
-
-In this case, we use localstorage to synchronize important information such as the position of the browsers, the position and rotation of the main mesh, and which browser controls the action with its identifier.
-
-All the synchronisation happens in the `src/routes/store.svelte.ts` file.
-
-Don't forget to check the `render` method in the main `route/+page.svelte` file, you will see how it's simple to differentiate which browser can synchronise and which one can update it's status from the storage. 
-
+Here, I wanted to emulate a rolling film strip effect, based on this [tweet](https://x.com/nuevo_tokyo/status/1709450289164816677) by Nuevo Tokyo for the VWFNDR camera.
 
 All prototypes that comes from playgl experiments will be shipped with:
 - Threejs  
@@ -33,7 +27,7 @@ To run:
 
 ```sh
 # clone repo
-git clone https://github.com/Guitouxx/001-WalkingDownTheBrowser.git
+git clone https://github.com/Guitouxx/002-FilmStripSwiper.git
 
 # install deps
 yarn
@@ -48,9 +42,9 @@ Now open `localhost:3000` to test. Use `yarn run build` to build everything.
 
 Thank you for the help they shared on github, x or shadertoy 
 
-[Bjorn Staal](https://x.com/_nonfigurativ_)
+[Eric Mika](https://github.com/kitschpatrol) for his [svelte-tweakpane-ui](https://github.com/kitschpatrol/svelte-tweakpane-ui) library
 
 
 ## License
 
-MIT, see [LICENSE](https://github.com/Guitouxx/001-WalkingDownTheBrowser/blob/main/LICENSE) for details.
+MIT, see [LICENSE](https://github.com/Guitouxx/002-FilmStripSwiper/blob/main/LICENSE) for details.
