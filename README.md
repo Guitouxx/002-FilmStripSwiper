@@ -1,4 +1,4 @@
-# 002 - Film Stripe Swiper
+# 002 - Film Strip Swiper
 
 ![Demo Screenshot](https://github.com/Guitouxx/001-WalkingDownTheBrowser/blob/main/static/screenshot.jpg?raw=true)
 
