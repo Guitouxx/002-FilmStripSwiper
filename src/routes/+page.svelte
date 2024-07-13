@@ -1,11 +1,10 @@
 <script lang="ts">
 	import 'css/main.css';
 	import { each, random, times } from 'lodash-es';
-	import { damp } from 'maath/easing';
 	import normalizeWheel from 'normalize-wheel';
 	import { onMount } from 'svelte';
 	import { Binding, Folder, Pane, ThemeUtils } from 'svelte-tweakpane-ui';
-	import { Clock, Color, Group, PerspectiveCamera, Scene, WebGLRenderer } from 'three';
+	import { Clock, Color, Group, MathUtils, PerspectiveCamera, Scene, WebGLRenderer } from 'three';
 	import { Card } from './Card';
 	import type { Params, StageSize } from './types';
 
@@ -98,7 +97,7 @@
 
 		const delta = clock.getDelta();
 
-		damp(scroll, 'position', scroll.target, 0.1, delta);
+		scroll.position = MathUtils.damp(scroll.position, scroll.target, 6, delta);
 
 		container.traverse((child) => {
 			if (child instanceof Card) {

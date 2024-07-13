@@ -1,5 +1,4 @@
-import { damp } from 'maath/easing';
-import { Color, DoubleSide, GLSL3, Mesh, PlaneGeometry, ShaderMaterial, Texture } from 'three';
+import { Color, DoubleSide, GLSL3, MathUtils, Mesh, PlaneGeometry, ShaderMaterial } from 'three';
 import fragmentShader from './fragment.glsl';
 import type { CardOptions, Params, StageSize } from './types';
 import vertexShader from './vertex.glsl';
@@ -21,7 +20,6 @@ const material = new ShaderMaterial({
 });
 
 export class Card extends Mesh {
-	texture?: Texture;
 	size: number;
 	stageScale: StageSize;
 
@@ -60,9 +58,10 @@ export class Card extends Mesh {
 
 		const mat = this.material as ShaderMaterial;
 		mat.uniforms.uStageWidth.value = this.stageScale.width;
-		damp(mat.uniforms.uAmplitude, 'value', playParams.shader.amplitude, 0.1, delta);
-		damp(mat.uniforms.uAngle, 'value', playParams.shader.angle, 0.1, delta);
-		damp(mat.uniforms.uWaveOffset, 'value', playParams.shader.waveOffset, 0.1, delta);
+		mat.uniforms.uAmplitude.value = MathUtils.damp(mat.uniforms.uAmplitude.value, playParams.shader.amplitude, 6, delta);
+		mat.uniforms.uAmplitude.value = MathUtils.damp(mat.uniforms.uAmplitude.value, playParams.shader.amplitude, 6, delta);
+		mat.uniforms.uAngle.value = MathUtils.damp(mat.uniforms.uAngle.value, playParams.shader.angle, 6, delta);
+		mat.uniforms.uWaveOffset.value = MathUtils.damp(mat.uniforms.uWaveOffset.value, playParams.shader.waveOffset, 6, delta);
 		mat.uniforms.uInvert.value = playParams.shader.inverse ? -1 : 1;
 
 		if (min) {
