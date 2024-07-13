@@ -13,13 +13,6 @@ All prototypes that comes from playgl experiments will be shipped with:
 - Sveltekit  
 - Tailwindcss
 
-## How to see the effect
-
-After a `yarn dev`, open the `http://localhost:3000` to see the scene.  
-Open a new window with the same URL and move it at another place.  
-Click on the stage to move the torus to your cursor and enjoy :)
-
-
 ## Dev
 
 
