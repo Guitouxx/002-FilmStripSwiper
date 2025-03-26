@@ -4,7 +4,7 @@
 
 ![Demo Screenshot](https://github.com/Guitouxx/002-FilmStripSwiper/blob/main/static/screenshot.jpg?raw=true)
 
-This repo includes a code extract of the prototype "WalkingFilm Strip Swiper" at [https://playgl.xyz/2](https://playgl.xyz/2).
+This repo includes a code extract of the prototype "Film Strip Swiper" at [https://playgl.xyz/2](https://playgl.xyz/2).
 
 Here, I wanted to emulate a rolling film strip effect, based on this [tweet](https://x.com/nuevo_tokyo/status/1709450289164816677) by Nuevo Tokyo for the VWFNDR camera.
 
