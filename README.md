@@ -1,6 +1,6 @@
 # 002 - Film Strip Swiper
 
-### [Live Demo](https://playgl-002-film-strip-swiper.vercel.app)
+### [Live Demo](https://playgl-002-film-strip-swiper.netlify.app)
 
 ![Demo Screenshot](https://github.com/Guitouxx/002-FilmStripSwiper/blob/main/static/screenshot.jpg?raw=true)
 
